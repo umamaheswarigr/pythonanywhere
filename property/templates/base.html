@@ -1,0 +1,404 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CK Real Estate.</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href={% static "css/style.css" %} />
+  </head>
+  <body>
+
+    {% block header %}
+    <header class="header">
+      <a href="#" class="logo">CK Real Estate.</a>
+
+      <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#allproperties">All Properties</a>
+        <a href="#aboutme">About Me</a>
+        <a href="#oevent">Omaha Events</a>
+      </nav>
+      <div id="menu-icon"></div>
+    </header>
+    {% endblock %}
+
+    {% block body %}
+
+    <section class="home" id="home">
+      <div class="home-content">
+        <h3 class="searchheading" data-aos="fade-up">
+          Easiest way to find your ideal property
+        </h3>
+      </div>
+
+      <div class="form-group">
+        <h3 class="headsearch">Price Range</h3>
+        <select class="form-control" id="srchINSTRUCTION_MODE" name="INSTRUCTION_MODE">
+            <option value=""></option>
+            <option value="q">$450,000+</option>
+            <option value="w">$400,000+</option>
+            <option value="e">$350,000+</option>
+            <option value="r">$300,000+</option>
+            <option value="t">$250,000+</option>
+            <option value="y">$200,000+</option>
+            <option value="u">$200,000 & below</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <h3 class="headsearch">Property Type</h3>
+        <select class="form-control" id="srchINSTRUCTION_MODE" name="INSTRUCTION_MODE">
+            <option value=""></option>
+            <option value="q">Single-Family Home</option>
+            <option value="w">Farmhouse</option>
+            <option value="e">Mansion</option>
+            <option value="r">Townhouse</option>
+            <option value="t">Condo</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <h3 class="headsearch">Neighborhood</h3>
+        <select class="form-control" id="srchINSTRUCTION_MODE" name="INSTRUCTION_MODE">
+            <option value=""></option>
+            <option value="q">Castle Creek</option>
+            <option value="w">Country Club</option>
+            <option value="e">Eagle Point</option>
+            <option value="r">Valley Shores</option>
+        </select>
+      </div>
+      <!--Search bar submit -->
+      <div class="searchsubmit">
+        <input class="btnsearch" name="BUTTON_CLEAR" onclick="window.location.href " type="reset" value="Reset">
+        <input class="btnsearch" name="BUTTON_SUBMIT" type="submit" value="Submit">
+      </div>
+      <div class="featured-container">
+        <h2 class="heading">Featured <span>Properties</span></h2>
+        <div class="featured-wrapper">
+          <div class="featured-box mySwiper">
+            <div class="featured-content swiper-wrapper">
+              <div class="featured-slide swiper-slide">
+                <img src={% static "images/portfolio1.jpg" %} alt="" />
+                <h3>Property 1</h3>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Exercitationem dignissimos aliquid iure delectus corrupti
+                  impedit, beatae aperiam ad iusto nostrum possimus cum pariatur
+                  harum assumenda suscipit a, qui, tempora maxime nulla facere quo
+                  ipsum tempore. Atque libero provident ad aut officia pariatur
+                  voluptate quaerat delectus nesciunt, sequi eligendi aperiam
+                  fugit unde nihil, iste similique illum. Dignissimos enim officia
+                  consequuntur dolores.
+                </p>
+                <button class="my-button" onclick="myFunction()">View Detail</button>
+              </div>
+              <div class="featured-slide swiper-slide">
+                <img src={% static "images/portfolio5.jpg" %} alt="" />
+                <h3>Property 2</h3>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Exercitationem dignissimos aliquid iure delectus corrupti
+                  impedit, beatae aperiam ad iusto nostrum possimus cum pariatur
+                  harum assumenda suscipit a, qui, tempora maxime nulla facere quo
+                  ipsum tempore. Atque libero provident ad aut officia pariatur
+                  voluptate quaerat delectus nesciunt, sequi eligendi aperiam
+                  fugit unde nihil, iste similique illum. Dignissimos enim officia
+                  consequuntur dolores.
+                </p>
+                <button class="my-button" onclick="myFunction()">View Detail</button>
+              </div>
+              <div class="featured-slide swiper-slide">
+                <img src={% static "images/portfolio7.jpg" %} alt="" />
+                <h3>Property 3</h3>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Exercitationem dignissimos aliquid iure delectus corrupti
+                  impedit, beatae aperiam ad iusto nostrum possimus cum pariatur
+                  harum assumenda suscipit a, qui, tempora maxime nulla facere quo
+                  ipsum tempore. Atque libero provident ad aut officia pariatur
+                  voluptate quaerat delectus nesciunt, sequi eligendi aperiam
+                  fugit unde nihil, iste similique illum. Dignissimos enim officia
+                  consequuntur dolores.
+                </p>
+                <button class="my-button" onclick="myFunction()">View Detail</button>
+              </div>
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+      <div class="profession-container">
+        <div class="profession-box"></div>
+        <div class="overlay"></div>
+      </div>
+
+      <div class="home-img">
+        <img src={% static "images/Elon.png" %} alt="" />
+      </div>
+    </section>
+
+    <section class="allproperties" id="allproperties">
+        <h2 class="allheading">All <span>Properties</span></h2>
+        <div class="allproperties-container">
+          <div class="allproperties-box">
+            <img src={% static "images/portfolio1.jpg" %} alt="" />
+
+            <div class="allproperties-layer">
+              <h4>Click For Detail</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Similique, ipsam est.
+              </p>
+              <a href="#"><i class="bx bx-link-external"></i></a>
+            </div>
+          </div>
+          <div class="allproperties-box">
+            <img src={% static "images/portfolio2.jpg" %} alt="" />
+
+            <div class="allproperties-layer">
+              <h4>Click For Detail</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Similique, ipsam est.
+              </p>
+              <a href="#"><i class="bx bx-link-external"></i></a>
+            </div>
+          </div>
+          <div class="allproperties-box">
+            <img src={% static "images/portfolio3.jpg" %} alt="" />
+
+            <div class="allproperties-layer">
+              <h4>Click For Detail</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Similique, ipsam est.
+              </p>
+              <a href="#"><i class="bx bx-link-external"></i></a>
+            </div>
+          </div>
+          <div class="allproperties-box">
+            <img src={% static "images/portfolio4.jpg" %} alt="" />
+
+            <div class="allproperties-layer">
+              <h4>Click For Detail</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Similique, ipsam est.
+              </p>
+              <a href="#"><i class="bx bx-link-external"></i></a>
+            </div>
+          </div>
+          <div class="allproperties-box">
+            <img src={% static "images/portfolio5.jpg" %} alt="" />
+
+            <div class="allproperties-layer">
+              <h4>Click For Detail</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Similique, ipsam est.
+              </p>
+              <a href="#"><i class="bx bx-link-external"></i></a>
+            </div>
+          </div>
+          <div class="allproperties-box">
+            <img src={% static "images/portfolio6.jpg" %} alt="" />
+
+            <div class="allproperties-layer">
+              <h4>Click For Detail</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Similique, ipsam est.
+              </p>
+              <a href="#"><i class="bx bx-link-external"></i></a>
+            </div>
+          </div>
+          <div class="allproperties-box">
+            <img src={% static "images/portfolio7.jpg" %} alt="" />
+
+            <div class="allproperties-layer">
+              <h4>Click For Detail</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Similique, ipsam est.
+              </p>
+              <a href="#"><i class="bx bx-link-external"></i></a>
+            </div>
+          </div>
+          <div class="allproperties-box">
+            <img src={% static "images/portfolio8.jpg" %} alt="" />
+
+            <div class="allproperties-layer">
+              <h4>Click For Detail</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Similique, ipsam est.
+              </p>
+              <a href="#"><i class="bx bx-link-external"></i></a>
+            </div>
+          </div>
+          <div class="allproperties-box">
+            <img src={% static "images/portfolio9.jpg" %} alt="" />
+            <div class="allproperties-layer">
+              <h4>Click For Detail</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Similique, ipsam est.
+              </p>
+              <a href="#"><i class="bx bx-link-external"></i></a>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section class="aboutme" id="aboutme">
+      <div class="aboutme-img">
+        <img src={% static "images/Elon.png" %} alt="" />
+      </div>
+      <section>
+        <div class="aboutme-content">
+          <h2 class="heading">About <span>Me</span></h2>
+          <h3>Hi, I'm <span>Carlos Musk</span>...</h3>
+          <p>Hi there! My name is Carlos Kosala, I am the owner and operator of CK Real Estate. I obtained my Real Estate License shortly after completing my undergraduate degree in Business Administration and became a successful real estate agent with a well-respected brokerage in the Omaha area<span2 id="dots">...</span2><span2 id="more">. However, I wanted to take control of my own business and provide a more personalized approach to serving my clients, so I obtained my Broker's License and started my own real estate agency. While I enjoy the independence of running my own business, I also recognize the importance of certain services that my former brokerage provided, such as establishing an online presence to support my business. I am excited to continue growing and expanding CK Real Estate and providing top-notch service to all of my clients. Thank you for taking the time to get to know me and my business!
+</span2></p>
+          <button class="aboutmebtn" onclick="myFunction()" id="myBtn">Read more</button>
+        </div>
+
+        <div class="section2-content">
+          <h2 class="heading">Contact. <span>Me!</span></h2>
+          <form action="#">
+            <div class="input-box">
+              <input type="text" placeholder="Full Name" />
+              <input type="email" placeholder="Email Address" />
+            </div>
+            <div class="input-box">
+              <input type="number" placeholder="Mobile Number" />
+              <input type="text" placeholder="Email Subject" />
+            </div>
+            <textarea
+              name=""
+              id=""
+              cols="30"
+              rows="8"
+              placeholder="Your Message"
+            ></textarea>
+            <input type="submit" value="Send Message" class="btn" />
+          </form>
+        </div>
+      </section> <!--new about -->
+    </section>
+
+    <section class="allproperties" id="oevent">
+      <h2 class="allheading">Omaha <span>Events</span></h2>
+      <div class="allproperties-container">
+        <div class="allproperties-box">
+          <img src={% static "images/Omaha1.jpeg" %} alt="" />
+          <div class="allproperties-layer">
+            <h4>Click For Detail</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Similique, ipsam est.
+            </p>
+            <a href="https://www.omahazoo.com/"><i class="bx bx-link-external"></i></a>
+          </div>
+        </div>
+        <div class="allproperties-box">
+          <img src={% static "images/Omaha2.jpeg" %} alt="" />
+          <div class="allproperties-layer">
+            <h4>Click For Detail</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Similique, ipsam est.
+            </p>
+            <a href="https://durhammuseum.org/"><i class="bx bx-link-external"></i></a>
+          </div>
+        </div>
+        <div class="allproperties-box">
+          <img src={% static "images/Omaha3.jpeg" %} alt="" />
+          <div class="allproperties-layer">
+            <h4>Click For Detail</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Similique, ipsam est.
+            </p>
+            <a href="https://www.tesla.com/"><i class="bx bx-link-external"></i></a>
+          </div>
+        </div>
+        <div class="allproperties-box">
+          <img src={% static "images/Omaha4.jpeg" %} alt="" />
+          <div class="allproperties-layer">
+            <h4>Click For Detail</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Similique, ipsam est.
+            </p>
+            <a href="https://www.google.com/"><i class="bx bx-link-external"></i></a>
+          </div>
+        </div>
+        <div class="allproperties-box">
+          <img src={% static "images/Omaha5.jpeg" %} alt="" />
+          <div class="allproperties-layer">
+            <h4>Click For Detail</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Similique, ipsam est.
+            </p>
+            <a href="https://www.google.com/"><i class="bx bx-link-external"></i></a>
+          </div>
+        </div>
+        <div class="allproperties-box">
+          <img src={% static "images/Omaha6.jpeg" %} alt="" />
+          <div class="allproperties-layer">
+            <h4>Click For Detail</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Similique, ipsam est.
+            </p>
+            <a href="https://www.google.com/"><i class="bx bx-link-external"></i></a>
+          </div>
+        </div>
+
+
+      </div>
+  </section>
+
+    {% endblock %}
+    {% block footer %}
+    <footer class="footer">
+      <div class="footer-text">
+        <p>Copyright &copy; 2023 by CK Real Estate | All Rights Reserved.</p>
+      </div>
+      <div class="adminlogin">
+        {% if user.is_authenticated %}
+        <a href="{% url 'logout' %}"><i class='bx bxs-log-out-circle'></i></a><!-- % url 'logout' %} -->
+        {% else %}
+        <a href="{% url 'login' %}"><i class='bx bx-log-in-circle' ></i></a><!--% url 'login' %} -->
+        {% endif %}
+      </div>
+      <div class="footer-iconTop">
+        <a href="#home"><i class="btn">Back To Top </i></a>
+      </div>
+    </footer>
+    {% endblock %}
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+      <script src={% static "js/script.js" %} ></script>
+      <script src={% static "js/readmore.js" %} ></script>
+  </body>
+</html>
+
+

@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+{% load crispy_forms_tags %}
+{% load static %}
+
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+   <div class="container">
+    <div class="card mt-5" style="width: 15rem;">
+        <title>login</title><link rel="stylesheet" href={% static "css/admin.css" %} />
+        <div class="card-body">
+            <form class="form" role="form" method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class="btn" type="submit" id="login">Login</button>
+            </form>
+        </div></div>
+<!--  <title>login</title>-->
+<!--  <link rel="stylesheet" href={% static "css/admin.css" %} />-->
+
+
+<body style="padding-left:20%;padding-top: 5%;padding-right: 20%;">
+  <form method="POST" >
+
+        <button type="button" class="backhome"
+    > <a href="/"
+    >Back to Home</a>
+    </button>
+        </body>
+</html>
